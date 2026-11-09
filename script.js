@@ -15,9 +15,13 @@ tagText.textContent = "";
     tagText.textContent = tagText.textContent + tags[i] + " . ";
  }
 
- /*for (let i = 0; i < prices.length; i++) {
-    total = total + prices[i].prices;
- } */
+ //total starts at 0 and will grow
+ let total = 0;
+ for (let i = 0; i < prices.length; i++) {
+    total = total + prices[i];
+ }
+
+  document.querySelector("#total").textContent = "$" +  total;
 
  
 
