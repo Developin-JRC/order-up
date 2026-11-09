@@ -17,11 +17,19 @@ tagText.textContent = "";
 
  //total starts at 0 and will grow
  let total = 0;
+ let tax = 0;
+ let grandTotal = 0;
  for (let i = 0; i < prices.length; i++) {
     total = total + prices[i];
+    tax = total * 0.08;
+    console.log("$" + total.toFixed(2));
+    grandTotal = total + tax;
+    console.log("Total with tax: $" + grandTotal.toFixed(2));
  }
+    document.querySelector("#total").textContent = "$" + total.toFixed(2); 
+    document.querySelector("#grandTotal").textContent = "$" + grandTotal.toFixed(2);
 
-  document.querySelector("#total").textContent = "$" +  total;
+    
 
  
 
